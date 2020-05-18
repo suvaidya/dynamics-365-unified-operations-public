@@ -39,3 +39,9 @@ incurs expenses is called the borrowing legal entity.
 
 Before a worker can create and submit expenses for work that is performed for a different legal entity, in the loaning legal entity, 
 on the **Expense management parameters** page, select the **Allow intercompany expense lines** option. 
+
+# Tax Posting for Intercompany expenses
+
+If you desire to use Tax groups associated with the loaning (source) legal entity instead of the borrowing (destination) legal entity in your expense report, then you will need to configure this in the General Ledger sales tax set up. When GL parameter "Legal entity for intercompany tax posting" is set to "Source",and "Apply sales tax taxation rules" is "NO", the tax combination for the loaning entity will be used. When the same parameter is set to "Destination", the tax combination for Borrowing entity will be used. 
+For US entities, when the parameter is set to "Source", the "Sales Tax receiveable" field also needs to be configured in the new Ledger posting groups form as the accounting engine will use the information from that field for tax related accounting entry.   
+This behavior is consistent for expense lines with or without a Project.  
